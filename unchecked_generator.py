@@ -85,7 +85,8 @@ while restart:
             print("Error, Whitespace is now off!")
 
     if letters == "":
-        print("Please enter a positive answer!")
+        print("Please enter a positive answer!\nLowers and Uppers letters are now on!")
+        letters += string.ascii_lowercase + string.ascii.uppercase
 
     number_of_characters_error = True
 
