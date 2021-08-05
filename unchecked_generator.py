@@ -118,8 +118,7 @@ while restart:
         while i <= code_number:
             i = i + 1
             UncheckedCodes.write(gencode() + "\n")
-
-        UncheckedCodes.close()
+            
         print(f"Ended. {i-1} unchecked codes generated!")
 
     while restart is False:
