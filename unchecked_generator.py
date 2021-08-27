@@ -20,8 +20,8 @@ print(
 """
 )
 
-yes.lower() = ["y", "yes"]
-no.lower() = ["n", "no"]
+yes = ["y", "yes"]
+no = ["n", "no"]
 infinity = ["infinity", "inf", "i"]
 
 restart = True
@@ -124,11 +124,11 @@ while restart:
     while restart is False:
         do_you_restart = input("Do you want restart? [y/n]")
 
-        if do_you_restart in yes:
+        if do_you_restart.lower() in yes:
             print("Restart...\n")
             restart = True
 
-        elif do_you_restart in no:
+        elif do_you_restart.lower() in no:
             print("Ok, bye :p")
             exit()
 
