@@ -20,8 +20,8 @@ print(
 """
 )
 
-yes = ["y", "yes", "Y", "YES", "Yes"]
-no = ["n", "no", "N", "NO", "No"]
+yes.lower() = ["y", "yes"]
+no.lower() = ["n", "no"]
 infinity = ["infinity", "inf", "i"]
 
 restart = True
