@@ -1,3 +1,4 @@
+
 import random, string, os
 
 os.system("cls")
@@ -38,6 +39,7 @@ while restart:
 
     letters = ""
     letters_add = ""
+    base_code = ""
 
     lower_case = input("Do you want lowercase letters? [y/n]: ")
 
@@ -88,6 +90,14 @@ while restart:
         print("Please enter a positive answer!\nLowers and Uppers letters are now on!")
         letters += string.ascii_lowercase + string.ascii.uppercase
 
+    base = input("Do you want a base of character? [y/n]: ")
+
+    if base.lower() in yes:
+        base_code = input("enter the base of characters for your codes >>> ")
+
+    elif base.lower() not in no:
+        print("Error, base code is now off!")
+
     number_of_characters_error = True
 
     while number_of_characters_error:
@@ -117,7 +127,7 @@ while restart:
         i = 1
         while i <= code_number:
             i = i + 1
-            UncheckedCodes.write(gencode() + "\n")
+            UncheckedCodes.write(base_code + gencode() + "\n")
             
         print(f"Ended. {i-1} unchecked codes generated!")
 
