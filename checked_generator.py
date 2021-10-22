@@ -114,7 +114,7 @@ def unchecked():
         print("Error, enter a valid number!")
         exit()
 
-    with open("uncheckedcodes.txt", "w") as UncheckedCodes:
+    with open("uncheckedcodes.txt", "a+") as UncheckedCodes:
 
         print("\nUnchecked Code Generation... Check your file uncheckedcodes.txt ;)")
 
@@ -128,10 +128,11 @@ def unchecked():
     input()
 
 def checked():
+    file_directory = input("enter the file directory >>> ")
     base = input("enter base url >>> ").lower()
     proxy = input("do you have proxies? >>> ").lower()
 
-    with open("uncheckedcodes.txt", "r") as file:
+    with open(file_directory, "r") as file:
         unchecked_codes = file.readlines()
 
     if proxy in yes:
@@ -163,7 +164,7 @@ def checked():
         else:
             print("\033[31m[-] {} | {}\033[0m".format(response.status_code, url), end="")
 
-    input()
+    input("\033[34m\n[+] Finish {} checked codes !\033[0m".format(len(unchecked_codes)))
 
 def main():
 
